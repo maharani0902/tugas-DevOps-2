@@ -1,0 +1,22 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show files
+        run: ls -la
+
+      - name: Simulasi Deploy
+        run: |
+          echo "Deploying aplikasi..."
+          echo "Deployment berhasil!"
